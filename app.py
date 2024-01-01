@@ -36,7 +36,7 @@ def get_prompt():
     prompt = None
     try:
         while(prompt==None):
-            prompt = input("\n\nEnter prompt: ")
+            prompt = input("\nEnter prompt: ")
     except Exception as e:
         print(e)
   
@@ -49,7 +49,6 @@ def get_image_name():
         while(image_name==None):
             image_name = input("Enter image name in the folder: ")
             image_name = './images/' + image_name
-            print('\n')
     except Exception as e:
         print(e)
     
@@ -79,12 +78,13 @@ def generate_response(prompt=None, image_name = None):
                 # To see each chunk size
                 # print("_"*80)
         
-    print('\n')
+    print("\n")
+    print('-'*80)
 
 
 if __name__=="__main__": 
     
-    user_input = input('Which version of Gemini would you like to use?\n\t1. Gemini-Pro(text only version)\n\t2. Gemini-Pro-Vision(for analyzing photos)\n*Defaults to option 1\n Chat optiom coming soon!\n\n Enter your input: ')
+    user_input = input('Which version of Gemini would you like to use?\n\t1. Gemini-Pro(text only version)\n\t2. Gemini-Pro-Vision(for analyzing photos)\n*Defaults to option 1\n Chat option coming soon!\n\n Enter your input: ')
     if(user_input == '' or user_input == None):
             user_input = "1"
 
